@@ -16,7 +16,7 @@ class StoryListViewModel: ObservableObject {
         self.webService = webService
     }
     
-    @MainActor 
+    @MainActor /// publishes changes to the main queue without having to do that yourself using dispatch queues
     func loadData() async {
         do {
            let data = await webService.fetchStories()

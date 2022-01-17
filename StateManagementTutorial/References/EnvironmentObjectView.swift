@@ -42,7 +42,7 @@ struct SecondScoreView: View {
 // navigation view.
 /// Think of this as the entry point of the app
 struct EnvironmentObjectView: View {
-    /// Declare this is the root, this is where the state object is instantiated or injected
+    /// Declare this in the root, this is where the state object is instantiated or injected
     @StateObject var appState: AppState
 
     var body: some View {
