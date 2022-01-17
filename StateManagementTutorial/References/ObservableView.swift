@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import WebService
 
 struct ObservableView: View {
     @ObservedObject var resultListViewModel: StoryListViewModel
@@ -14,9 +15,26 @@ struct ObservableView: View {
         NavigationView {
             List(resultListViewModel.stories) { story in
                 HStack {
-                    AsyncImage(url:  URL(string: story.cover)!)
-                        .frame(minHeight: 50, maxHeight: 50)
-                                        .aspectRatio(2 / 3, contentMode: .fit)
+                    AsyncImage(
+                        url: URL(string: story.cover)!,
+                                transaction: Transaction(animation: .easeInOut)
+                            ) { phase in
+                                switch phase {
+                                case .empty:
+                                    ProgressView()
+                                case .success(let image):
+                                    image
+                                        .resizable()
+                                        .transition(.scale(scale: 0.1, anchor: .center))
+                                case .failure:
+                                    Image(systemName: "wifi.slash")
+                                @unknown default:
+                                    EmptyView()
+                                }
+                            }
+                            .frame(width: 44, height: 44)
+                            .background(Color.gray)
+                            .clipShape(Circle())
                     Text(story.title)
                         .font(.headline)
                 }
@@ -32,6 +50,6 @@ struct ObservableView: View {
 
 struct Observable_Previews: PreviewProvider {
     static var previews: some View {
-        ObservableView(resultListViewModel: StoryListViewModel(webService: WebService()))
+        ObservableView(resultListViewModel: StoryListViewModel(webService: WebServiceProvider()))
     }
 }

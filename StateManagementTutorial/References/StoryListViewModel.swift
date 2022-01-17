@@ -6,15 +6,17 @@
 //
 
 import Foundation
+import WebService
 
-@MainActor class StoryListViewModel: ObservableObject {
+class StoryListViewModel: ObservableObject {
     @Published var stories: [Story] = [] // TODO: Make a Story VM 
-    private var webService: WebServicing
+    private var webService: WebServiceProviding
     
-    init(webService: WebServicing) {
+    init(webService: WebServiceProviding) {
         self.webService = webService
     }
     
+    @MainActor 
     func loadData() async {
         do {
            let data = await webService.fetchStories()

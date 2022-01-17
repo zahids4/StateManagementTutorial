@@ -6,12 +6,13 @@
 //
 
 import SwiftUI
+import WebService
 
 @main
 struct StateManagementTutorialApp: App {
     var body: some Scene {
         WindowGroup {
-            ObservableView(resultListViewModel: StoryListViewModel(webService: WebService()))
+            ObservableView(resultListViewModel: StoryListViewModel(webService:  WebServiceProvider()))
         }
     }
 }
