@@ -18,6 +18,7 @@
 		277E55472788A931004981AD /* ObservableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 277E55462788A931004981AD /* ObservableView.swift */; };
 		27F118012795DFBA0087C547 /* StoryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273631BC278DED2200CE4776 /* StoryListViewModel.swift */; };
 		27F118042795E3030087C547 /* WebService in Frameworks */ = {isa = PBXBuildFile; productRef = 27F118032795E3030087C547 /* WebService */; };
+		27F118062795F4D00087C547 /* EnvironmentObjectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27F118052795F4D00087C547 /* EnvironmentObjectView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		277E55442788A434004981AD /* StateAndBindingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateAndBindingView.swift; sourceTree = "<group>"; };
 		277E55462788A931004981AD /* ObservableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservableView.swift; sourceTree = "<group>"; };
 		27F118002795C96A0087C547 /* WebService */ = {isa = PBXFileReference; lastKnownFileType = folder; name = WebService; path = ../WebService; sourceTree = "<group>"; };
+		27F118052795F4D00087C547 /* EnvironmentObjectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentObjectView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 				277E55442788A434004981AD /* StateAndBindingView.swift */,
 				277E55462788A931004981AD /* ObservableView.swift */,
 				273631BC278DED2200CE4776 /* StoryListViewModel.swift */,
+				27F118052795F4D00087C547 /* EnvironmentObjectView.swift */,
 			);
 			path = References;
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 			files = (
 				273631C4278DF4B500CE4776 /* ImageCache.swift in Sources */,
 				277E55472788A931004981AD /* ObservableView.swift in Sources */,
+				27F118062795F4D00087C547 /* EnvironmentObjectView.swift in Sources */,
 				277E55392788A413004981AD /* ContentView.swift in Sources */,
 				273631BF278DF1D000CE4776 /* ImageLoader.swift in Sources */,
 				27F118012795DFBA0087C547 /* StoryListViewModel.swift in Sources */,
